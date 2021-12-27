@@ -9,15 +9,14 @@ public class EuclidGCD
 			return x;
 		else
 			return gcd(y, x % y);
-		//Áß¿äÇÑ°Ô (y, x % y)ÀÌ°í ÀÌ°Ô ´õ ±í°Ô µé¾î°¡¸é 
-		// xÀÚ¸®¿¡´Â y, yÀÚ¸®¿¡´Â (x % y) ÇÑ ¹ø´õ Àç±Í¸¦ ÇÏ¸é 
-		// (x % y), (y % (x % y)), Ã¹ Àç±Í¶§ yÀÚ¸®¿¡ ÀÖ¾ú´ø x % y°¡ x·Î, 
-		// ±×¸®°í xÀÚ¸®·Î °£ y¸¦ y ÀÚ¸®¿¡ ÀÖ´ø x % y·Î ³ª¸ÓÁö¸¦ ±¸ÇÏ°í.... ÀÌ·±½ÄÀ¸·Î
+		//ì¤‘ìš”í•œê²Œ (y, x % y)ì´ê³  ì´ê²Œ ë” ê¹Šê²Œ ë“¤ì–´ê°€ë©´ 
+		// xìžë¦¬ì—ëŠ” y, yìžë¦¬ì—ëŠ” (x % y) í•œ ë²ˆë” ìž¬ê·€ë¥¼ í•˜ë©´ 
+		// (x % y), (y % (x % y)), ì²« ìž¬ê·€ë•Œ yìžë¦¬ì— ìžˆì—ˆë˜ x % yê°€ xë¡œ, 
+		// ê·¸ë¦¬ê³  xìžë¦¬ë¡œ ê°„ yë¥¼ y ìžë¦¬ì— ìžˆë˜ x % yë¡œ ë‚˜ë¨¸ì§€ë¥¼ êµ¬í•˜ê³ .... ì´ëŸ°ì‹ìœ¼ë¡œ
 		
-		//±×·¯´Ù º¸´Ï Ã·¿¡´Â Å« ³ðÀ» ÀÛÀº ³ðÀ¸·Î ³ª´²¾ßÇÒ°Å °°´Ù »ý°¢µÇ´Âµ¥, ÀÛÀº ³ð % Å« ³ðÀ» ÇÏ¸é (ex 8, 22)
-		//±×³É ÀÛÀº ³ðÀ¸·Î ³ª¸ÓÁö·Î ³ª¿À°í yÀÚ¸® ÀÖ´ø Å« ³ðÀÌ´ø 22 x ÀÚ¸®·Î °¡°í y ÀÚ¸®¿¡´Â ³ª´²¼­ ³ª¿Â ³ª¸ÓÁöÀÎ 8·Î
-		// 22, 8ÀÌ¶û ÇÏ´Â°Å¶û °°°Ô ³ª¿È. ±×·¡¼­ À§Ä¡ ¹Ù²¸µµ °ÆÁ¤ ÇÒ ÇÊ¿ä´Â ¾ø³×
-		// ½Ã¹ß Àç±Í°¡ ¸ÕÁö´Â ¾Æ´Âµ¥ Àç±ÍµÇ´Â ¾Ë°í¸®ÁòÀÌ ÇÞ°¥¸®¸é ÀÌ·¸°Ô µÈ´Ù´Ï±ñ ¸Ç³¯;;
+		//ê·¸ëŸ¬ë‹¤ ë³´ë‹ˆ ì²¨ì—ëŠ” í° ë†ˆì„ ìž‘ì€ ë†ˆìœ¼ë¡œ ë‚˜ëˆ ì•¼í• ê±° ê°™ë‹¤ ìƒê°ë˜ëŠ”ë°, ìž‘ì€ ë†ˆ % í° ë†ˆì„ í•˜ë©´ (ex 8, 22)
+		//ê·¸ëƒ¥ ìž‘ì€ ë†ˆìœ¼ë¡œ ë‚˜ë¨¸ì§€ë¡œ ë‚˜ì˜¤ê³  yìžë¦¬ ìžˆë˜ í° ë†ˆì´ë˜ 22 x ìžë¦¬ë¡œ ê°€ê³  y ìžë¦¬ì—ëŠ” ë‚˜ëˆ ì„œ ë‚˜ì˜¨ ë‚˜ë¨¸ì§€ì¸ 8ë¡œ
+		// 22, 8ì´ëž‘ í•˜ëŠ”ê±°ëž‘ ê°™ê²Œ ë‚˜ì˜´. ê·¸ëž˜ì„œ ìœ„ì¹˜ ë°”ê»´ë„ ê±±ì • í•  í•„ìš”ëŠ” ì—†ë„¤
 		
 		
 	}
@@ -26,15 +25,15 @@ public class EuclidGCD
 	{
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("µÎ Á¤¼öÀÇ ÃÖ´ë °ø¾à¼ö¸¦ ±¸ÇÕ´Ï´Ù.");
+		System.out.println("ë‘ ì •ìˆ˜ì˜ ìµœëŒ€ ê³µì•½ìˆ˜ë¥¼ êµ¬í•©ë‹ˆë‹¤.");
 		
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		System.out.println("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”. : ");
 		int x = stdIn.nextInt();
 		
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. : ");
+		System.out.println("ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”. : ");
 		int y = stdIn.nextInt();
 		
-		System.out.println("ÃÖ´ë°ø¾à¼ö´Â " + gcd(x,y) + "ÀÔ´Ï´Ù.");
+		System.out.println("ìµœëŒ€ê³µì•½ìˆ˜ëŠ” " + gcd(x,y) + "ìž…ë‹ˆë‹¤.");
 		
 	}
 }
